@@ -63,7 +63,11 @@ function Pricing() {
         // Make a request to the backend server to initiate STK push
         setLoading(true);
         const response = await axios.post(
+<<<<<<< HEAD
           "/initiator.php", //Check this from the last Till No paynment backend
+=======
+          "backend/initiator.php",
+>>>>>>> 23cba958331cd016478406f558c014303a1e69e2
           formData,
           {
             headers: {
@@ -105,7 +109,11 @@ function Pricing() {
     let swalDisplayed = false; // Flag to track if Swal modal has been displayed
   
     const fetchData = () => {
+<<<<<<< HEAD
       fetch(`backend/callback.php`)   //Check this from the last Till No paynment backend
+=======
+      fetch(`backend/callback.php`)
+>>>>>>> 23cba958331cd016478406f558c014303a1e69e2
         .then((response) => {
           if (!response.ok) {
             throw new Error('Failed to fetch data from the server');

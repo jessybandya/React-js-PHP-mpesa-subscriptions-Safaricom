@@ -39,7 +39,7 @@ export default function Login() {
         password: password,
       };
         try {
-          const response = await fetch('https://electrikacomputers.co.ke/backend/php/sub/login.php', {
+          const response = await fetch('backend/login.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

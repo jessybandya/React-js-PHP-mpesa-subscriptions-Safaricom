@@ -42,7 +42,7 @@ export default function Register() {
             setLoading(false);
             return;
         }else{
-            fetch('https://electrikacomputers.co.ke/backend/php/sub/index.php', {
+            fetch('backend/signup.php', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

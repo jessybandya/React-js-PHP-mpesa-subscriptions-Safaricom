@@ -63,7 +63,7 @@ function Pricing() {
         // Make a request to the backend server to initiate STK push
         setLoading(true);
         const response = await axios.post(
-          "https://electrikacomputers.co.ke/backend/php/elimisha/index.php",
+          "/initiator.php", //Check this from the last Till No paynment backend
           formData,
           {
             headers: {
@@ -105,7 +105,7 @@ function Pricing() {
     let swalDisplayed = false; // Flag to track if Swal modal has been displayed
   
     const fetchData = () => {
-      fetch(`https://electrikacomputers.co.ke/backend/php/elimisha/callback.php`)
+      fetch(`backend/callback.php`)   //Check this from the last Till No paynment backend
         .then((response) => {
           if (!response.ok) {
             throw new Error('Failed to fetch data from the server');
@@ -191,7 +191,7 @@ function Pricing() {
 
   const updateSubscriptionStatus = (email, newSubscriptionType) => {
     const created_at = Date.now();
-    fetch('https://electrikacomputers.co.ke/backend/php/sub/update_subscription_type.php', {
+    fetch('backend/update_subscription_type.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
